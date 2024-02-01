@@ -13,18 +13,18 @@
   </head>
   <body>
 
-    <div class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center" style="display: none;">
-      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    <div class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center" >
+      <i class="fa fa-spinner fa-spin fa-5x "></i>
   </div>
   <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0" >
     <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
         <div class="links">
             <ul class="list-unstyled overflow-hidden">
-                <li onclick="showSearchInputs(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Search</li>
-                <li onclick="getCategories(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Categories</li>
-                <li onclick="getArea(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Area</li>
-                <li onclick="getIngredients(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Ingredients</li>
-                <li onclick="showContacts(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Contact Us</li>
+                <li id="Search" class="py-2 position-relative cursor-pointer" style="top: 300px;">Search</li>
+                <li id="Categories" class="py-2 position-relative cursor-pointer" style="top: 300px;">Categories</li>
+                <li id="area" class="py-2 position-relative cursor-pointer" style="top: 300px;">Area</li>
+                <li id="ingredients" class="py-2 position-relative cursor-pointer" style="top: 300px;">Ingredients</li>
+                <li id="contact_us" class="py-2 position-relative cursor-pointer" style="top: 300px;">Contact Us</li>
             </ul>
         </div>
         <div class="nav-footer">
@@ -53,19 +53,14 @@
   <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center" style="display: none;">
       <i class="fa fa-spinner fa-spin fa-5x"></i>
   </div>
-  
-
   <div class="container">
       <div class="row py-5 g-4 " id="rowData">
- 
-  
- 
   </div>
   </div>
 </div>
    
    <script src="css/bootstrap.bundle.min.js"></script>
     <script src="jquery-3.7.1.min.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
