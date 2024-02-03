@@ -1,9 +1,10 @@
 let searchContainer = $("#searchContainer");
 let rowData = $("#rowData");
 $(document).ready(function(){
+  getDefalutData();
   $(".loading-screen").fadeOut(500);
   $("body").css("overflow", "visible");
-  getDefalutData();
+  
 });
 
 function closeSideNav() {
@@ -362,26 +363,92 @@ $("#contact_us").click(function showContacts() {
   var repasswordInput = $("#repasswordInput");
 
   nameInput.keyup(function () {
-    inputsValidation();
+    shoNameMesaage();
   });
   emailInput.keyup(function () {
-    inputsValidation();
+    showMailMessage();
   });
   ageInput.keyup(function () {
-    inputsValidation();
+    showAgeMessage();
   });
   phoneInput.keyup(function () {
-    inputsValidation();
+    showPhoneMessage();
   });
   passwordInput.keyup(function () {
-    inputsValidation();
+    showpasswordMessage();
   });
   repasswordInput.keyup(function () {
-    inputsValidation();
+    showRepasswordMessage();
   });
 });
 
-// var submitBtn= $("#submitBtn");
+
+function shoNameMesaage () {
+  if (nameValidation($("#nameInput").val())== false)
+  {
+    $("#nameAlert").removeClass("d-none");
+    
+  } else{
+    $("#nameAlert").addClass("d-none");
+  }
+  inputsValidation()
+  }
+
+function showMailMessage(){
+  if ( emailValidation($("#emailInput").val())== false)
+  {
+    $("#emailAlert").removeClass("d-none");
+    
+  } else{
+    $("#emailAlert").addClass("d-none");
+  }
+  inputsValidation()
+}
+
+function showAgeMessage(){
+  if ( ageValidation($("#ageInput").val())== false)
+{
+  $("#ageAlert").removeClass("d-none");
+  
+} else{
+  $("#ageAlert").addClass("d-none");
+}
+inputsValidation()
+}
+
+function showPhoneMessage(){
+  if ( phoneValidation($("#phoneInput").val())== false)
+  {
+    $("#phoneAlert").removeClass("d-none");
+    
+  } else{
+    $("#phoneAlert").addClass("d-none");
+  }
+  inputsValidation()
+}
+
+function showpasswordMessage(){
+  if (  passwordValidation($("#passwordInput").val())== false)
+  {
+    $("#passwordAlert").removeClass("d-none");
+    
+  } else{
+    $("#passwordAlert").addClass("d-none");
+  }
+  inputsValidation()
+}
+
+function showRepasswordMessage(){
+  if (  repasswordValidation($("#repasswordInput").val())== false)
+  {
+    $("#repasswordAlert").removeClass("d-none");
+    
+  } else{
+    $("#repasswordAlert").addClass("d-none");
+  }
+  inputsValidation()
+}
+
 
 function inputsValidation() {
   if (
